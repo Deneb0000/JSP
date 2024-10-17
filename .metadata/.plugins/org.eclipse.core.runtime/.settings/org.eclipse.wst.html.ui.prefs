@@ -1,0 +1,18 @@
+commentBorder=\#C7DD0C | null | null | false | null | null
+commentText=\#C7DD0C | null | null | false | null | null
+declBoder=\#FFFFFF | null | null | null | null | null
+doctypeExternalId=\#FFFFFF | null | null | null | null | null
+doctypeExternalPubref=\#FFFFFF | null | null | null | null | null
+doctypeExtrenalSysref=\#FFFFFF | null | null | null | null | null
+doctypeName=\#FFFFFF | null | null | null | null | null
+eclipse.preferences.version=1
+entityReference=\#8DCBE2 | null | null | null | null | null
+newFileTemplateName=New HTML File (5)
+org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="html_new" deleted\="false" description\="html 5" enabled\="true" id\="org.eclipse.wst.html.ui.templates.html5" name\="New HTML File (5)">&lt;\!DOCTYPE html&gt;\r\n&lt;html&gt;\r\n&lt;head&gt;\r\n&lt;meta charset\="${encoding}"&gt;\r\n&lt;title&gt;Insert title here&lt;/title&gt;\r\n&lt;link rel\="shortcut icon" type\="image/x-icon" href\="http\://localhost/jspPro/images/SiSt.ico"&gt;\r\n&lt;script src\="https\://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"&gt;&lt;/script&gt;\r\n&lt;meta name\="viewport" content\="width\=device-width, initial-scale\=1.0"&gt;\r\n&lt;meta name\="google" content\="notranslate"&gt;\r\n&lt;link rel\="stylesheet" href\="http\://localhost/jspPro/resources/cdn-main/example.css"&gt;\r\n&lt;script src\="http\://localhost/jspPro/resources/cdn-main/example.js"&gt;&lt;/script&gt;\r\n&lt;style&gt;\r\n span.material-symbols-outlined{\r\n    vertical-align\: text-bottom;\r\n }\r\n&lt;/style&gt;\r\n&lt;/head&gt;\r\n&lt;body&gt;\r\n&lt;header&gt;\r\n  &lt;h1 class\="main"&gt;&lt;a href\="\#" style\="position\: absolute;top\:30px;"&gt;ddd Home&lt;/a&gt;&lt;/h1&gt;\r\n  &lt;ul&gt;\r\n    &lt;li&gt;&lt;a href\="\#"&gt;\uB85C\uADF8\uC778&lt;/a&gt;&lt;/li&gt;\r\n    &lt;li&gt;&lt;a href\="\#"&gt;\uD68C\uC6D0\uAC00\uC785&lt;/a&gt;&lt;/li&gt;\r\n  &lt;/ul&gt;\r\n&lt;/header&gt;\r\n&lt;div&gt;\r\n  &lt;xmp class\="code"&gt;\r\n    ${cursor}\r\n  &lt;/xmp&gt;\r\n&lt;/div&gt;\r\n&lt;/body&gt;\r\n&lt;/html&gt;</template></templates>
+overriddenByCSS=,commentBorder,commentText,declBoder,doctypeExternalId,doctypeExternalPubref,doctypeExtrenalSysref,doctypeName,entityReference,tagAttributeEquals,tagAttributeName,tagAttributeValue,tagBorder,tagName,xmlContent,
+tagAttributeEquals=\#D8D8D8 | null | null | null | null | null
+tagAttributeName=\#BED6FF | null | null | null | null | null
+tagAttributeValue=\#FFC600 | null | null | null | null | null
+tagBorder=\#79ABFF | null | null | null | null | null
+tagName=\#BED6FF | null | null | null | null | null
+xmlContent=\#D8D8D8 | null | null | null | null | null

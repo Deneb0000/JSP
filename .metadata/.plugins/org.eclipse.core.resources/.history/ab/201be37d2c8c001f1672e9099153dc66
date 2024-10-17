@@ -1,0 +1,77 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/jspPro/images/SiSt.ico">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<link rel="stylesheet" href="http://localhost/jspPro/resources/cdn-main/example.css">
+<script src="http://localhost/jspPro/resources/cdn-main/example.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">ddd Home</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+1. jsp 
+	get 방식 요청
+	post 방식 요청
+	
+2. 서블릿
+	get 방식 요청
+	post 방식 요청
+  </xmp>
+  
+  <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">jsp - get 방식 요청</a></li>
+    <li><a href="#tabs-2">jsp - post 방식 요청</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>
+    1. 웹 브라우저 : 주소창 url 입력 후 요청<br>
+    2. a 링크 태그 <br />
+    3. location.href 요청 <br />
+    4. form method = 'get' 요청 <br />
+    <br />
+    정수 : <input type="text" id="n" name="n,value=10" /><br />
+    <a href="ex02_ok.jsp">ex02_ok.jsp</a>  
+    </p>
+  </div>
+  <div id="tabs-2">
+    <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+  </div>
+ 
+ <script>
+ 	$("#tab-1 a").on("click", function() {
+		let n =	$("#n").val();
+		let oldHref = $(this).attr("href");		//this = 클릭한 a 태그
+		let newHref = `\$(oldHref)?n=\${n}`;	// "ex02_ok.jsp"
+	})
+ </script>
+ 
+</div>
+</body>
+</html>

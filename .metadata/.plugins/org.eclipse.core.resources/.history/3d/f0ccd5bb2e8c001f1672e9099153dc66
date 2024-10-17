@@ -1,0 +1,111 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+String contextPath = request.getContextPath();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://localhost/jspPro/images/SiSt.ico">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google" content="notranslate">
+<link rel="stylesheet" href="http://localhost/jspPro/resources/cdn-main/example.css">
+<script src="http://localhost/jspPro/resources/cdn-main/example.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#tabs" ).tabs();
+  } );
+  </script>
+<style>
+ span.material-symbols-outlined{
+    vertical-align: text-bottom;
+ }
+</style>
+</head>
+<body>
+<header>
+  <h1 class="main"><a href="#" style="position: absolute;top:30px;">ddd Home</a></h1>
+  <ul>
+    <li><a href="#">로그인</a></li>
+    <li><a href="#">회원가입</a></li>
+  </ul>
+</header>
+<div>
+  <xmp class="code">
+1. jsp 
+	get 방식 요청
+	post 방식 요청
+	
+2. 서블릿
+	get 방식 요청
+	post 방식 요청
+  </xmp>
+  
+  <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1">jsp - get 방식 요청</a></li>
+    <li><a href="#tabs-2">jsp - post 방식 요청</a></li>
+  </ul>
+  <div id="tabs-1">
+    <p>
+    1. 웹 브라우저 : 주소창 url 입력 후 요청<br>
+    2. a 링크 태그 <br />
+    3. location.href 요청 <br />
+    4. form method = 'get' 요청 <br />
+    <br />
+    정수 : <input type="text" id="n" name="n,value=10" /><br />
+    <a href="ex02_ok.jsp">ex02_ok.jsp</a>  
+    </p>
+  </div>
+  <div id="tabs-2">
+    <p>
+    <!-- action x : 자기자신 부름 	method x : get 방식 -->
+    <form>
+    Name : <input type="text" id="name" name="name," value="홍길동" /><br />
+    Age : <input type="text" id="age" name="age," value="20" /><br />
+    
+    <input type="radio" id="method" value="get" checked="checked" />get 요청
+    <input type="radio" id="method" value="post" />Post 요청
+    <br />
+    <button type="button">전송(submit)</button>
+    </form>
+    </p>
+  </div>
+ <script>
+ $("#tabs-2 a").on("click", function() {
+	 let method = $(":radio[name=method].checked").val();
+	 $(this)	// this=button
+	 .parent()	//<form>
+	 .attr({	//속성바꾸기
+		 "method" : method
+	 })	
+ });
+ </script>
+ 
+ 
+ <script>
+ 	$("#tabs-1 a").on("click", function() {
+		/*	1.풀이
+		let n =	$("#n").val();
+		let oldHref = $(this).attr("href");		//"ex02_ok.jsp"		this = 클릭한 a 태그
+		let newHref = `\$(oldHref)?n=\${n}`;	// "ex02_ok.jsp"
+		$(this).attr("href", newHref)
+		*/
+		
+		// 2.풀이
+		$(this).attr("href", function(index, oldHref) {
+			let n =	$("#n").val();
+			return `\$(oldHref)?n=\${n}`;
+		})
+	})
+ </script>
+ 
+</div>
+</body>
+</html>

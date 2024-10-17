@@ -1,0 +1,6 @@
+package days02;
+//서블릿규약을 따르는 서블릿 클래스 선언
+
+public class Now {
+
+}
