@@ -1,0 +1,80 @@
+package days04;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.doit.domain.DeptVO;
+
+import com.util.DBConn;
+
+
+@WebServlet("/days04/empsearch.htm")
+public class Empsearch extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	public Empsearch() {
+		super();
+
+	}
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(">EmpSearch.doGet()");
+		//1. 부서 정보
+		Connection conn = DBConn.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = " SELECT deptno, dname, loc "
+				+" FROM dept ";
+		int deptno;
+		String dname, loc;
+
+		DeptVO vo = null;
+		ArrayList<DeptVO> dlist = null;
+
+		try{
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			if( rs.next() ){
+				dlist = new ArrayList<>();
+				do{
+					deptno = rs.getInt("deptno");
+					dname = rs.getString("dname");
+					loc = rs.getString("loc");           
+					vo = new DeptVO(deptno, dname, loc);
+					dlist.add(vo);
+				}while(rs.next());
+			} // if
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally{
+			try{
+				rs.close();
+				pstmt.close();
+				// DBConn.close();
+			}catch(SQLException e){
+				e.printStackTrace();
+			} //try     
+		} // try  
+
+		//2. 잡 정보
+		//3. 부서+잡 검색된 사원 정보
+		//4. 포워딩
+		String path = "/days04/ex02_empsearch_jstl.htm";
+
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		doGet(request, response);
+	}
+
+}

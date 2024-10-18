@@ -85,6 +85,8 @@ Connection conn = null;		//db연결
 			e.printStackTrace();
 		}//try/catch
 	}//try/catch/finally
+	
+	
 %>
 <!DOCTYPE html>
 <html>

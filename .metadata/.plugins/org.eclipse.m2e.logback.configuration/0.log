@@ -11,3 +11,5 @@
 2024-10-16 11:35:34,725 [Worker-208: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-websocket/9.0.93/tomcat-websocket-9.0.93-sources.jar
 2024-10-16 11:35:34,988 [Worker-204: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/9.0.93/tomcat-servlet-api-9.0.93-sources.jar
 2024-10-16 11:35:35,007 [Worker-204: Debug Source Lookup] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/apache/tomcat/tomcat-servlet-api/9.0.93/tomcat-servlet-api-9.0.93-sources.jar
+2024-10-17 08:55:52,391 [Worker-10: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-10-18 08:55:12,727 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

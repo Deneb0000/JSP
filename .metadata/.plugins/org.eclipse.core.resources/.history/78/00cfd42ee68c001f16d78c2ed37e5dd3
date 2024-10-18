@@ -1,0 +1,29 @@
+package days04;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+//urlPatterns = { "/scott/dept" }) 이 코딩이랑 같은거다 urlpatterns을 생략해도 된다
+@WebServlet("/scott/dept")	
+public class ScottDept extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+		public ScottDept() {
+        super();
+     }
+    
+    //post요청, get 요청
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println(">ScottDept.doget()...");
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+		doGet(request, response);
+	}
+
+}

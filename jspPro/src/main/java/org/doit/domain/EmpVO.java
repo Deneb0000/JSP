@@ -19,13 +19,13 @@ import lombok.ToString;
 
 public class EmpVO {
 	private int empno;
-	private String job, ename;
+	private String ename, job;
 	private int mgr;
+	private Date hiredate;
 	private double sal; //pay
 	private double comm;
 	private int deptno;
 //	private LocalDateTime hiredate;
-	private Date hiredate;
 
 
 } //class
