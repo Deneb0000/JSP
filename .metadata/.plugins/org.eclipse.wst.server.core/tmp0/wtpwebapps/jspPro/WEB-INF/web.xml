@@ -25,4 +25,45 @@
 		<url-pattern>/test/*</url-pattern>
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping> -->
+	
+	<!-- <error-page>
+	<error-code>404</error-code>
+	<location>/WEB-INF/error/404.jsp</location>
+	</error-page>
+	
+	<error-page>
+	<exception-type>java.lang.NullPointerException</exception-type>
+	<location>/WEB-INF/error/NullPionter.jsp</location>
+	</error-page> -->
+	
+	
+	<!-- 의미 파악하기 : 해드 푸터 추가
+	<jsp-config>
+	<jsp-property-group>
+	<url-pattern>/days01/*</url-pattern>
+	<include-prelude>/WEB-INF/inc/variable.jspf</include-prelude>
+	<include-coda>/WEB-INF/inc/footer.jspf</include-coda>
+	</jsp-property-group>
+	</jsp-config> -->
+	
+	
+	<!-- 웹 사이트 전체 페이지(모든페이지)에서 사용할 공통 환경 설정 값을 초기화한다.
+	application 객체 + 메서드() ex05_02.jsp-->
+	<context-param>
+	<description>DB 사용자 계정</description>
+	<param-name>user</param-name>
+	<param-value>scott</param-value>
+	</context-param>
+	
+	<context-param>
+	<description>DB 비밀번호</description>
+	<param-name>password</param-name>
+	<param-value>ss123$</param-value>
+	</context-param>
+	
+	<context-param>
+	<description>파일 업로드 경로</description>
+	<param-name>path</param-name>
+	<param-value>/days06</param-value>
+	</context-param> 
 </web-app>

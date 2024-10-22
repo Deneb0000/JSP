@@ -20,17 +20,20 @@ import org.doit.domain.EmpVO;
 
 import com.util.DBConn;
 
-
-//@WebServlet("/days04/empsearch.htm")
+// @WebServlet("/days04/empsearch.htm")
 public class EmpSearch extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	public EmpSearch() {
 		super();
 
 	}
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(">EmpSearch.doGet()");
-		//1. 부서 정보
+
+		System.out.println("doGet()");
+
+		// 1. 부서 정보를 리스트에 담는다.
 		Connection conn = DBConn.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -67,8 +70,7 @@ public class EmpSearch extends HttpServlet {
 			} //try     
 		} // try  
 
-
-		//2. 잡 정보
+		// 2. 잡 정보를 리스트에 담는다.
 		sql = " SELECT DISTINCT job "
 				+" FROM emp "
 				+" ORDER BY job ASC";      
@@ -96,22 +98,21 @@ public class EmpSearch extends HttpServlet {
 			} //try     
 		} // try  
 
-		
-		//3. 부서+잡 검색된 사원 정보
-		// ?deptno=10&deptno=30&deptno=40
+		// 3. 선택한 부서+잡 으로 검색된 사원 정보 elist
+		// ?deptno=10&deptno=30&deptno=40 job 도 여러개
 		// ?,?,?
-		// ?deptno="10,20,40"
+		// 이번엔 ?deptno="10,20,40" 로 넘긴다.
 		String pdeptno = null;
 		String pjob = null;
 		
 		try {
 	         String [] pdeptnos = request.getParameterValues("deptno");
 	         if ( pdeptnos != null ) {
-	            pdeptno = String.join(", ", pdeptnos); // "10, 20, 430"
+	            pdeptno = String.join(", ", pdeptnos); // "10, 20, 40"
 	         }
-	         String [] pjobs = request.getParameterValues("job");	//job도 받아오겠다
+	         String [] pjobs = request.getParameterValues("job");
 	         if ( pjobs != null ) {
-	            pjob = String.join("', '", pjobs); // "'ANALYST',  'MANAGER'" 연결시켜서
+	            pjob = String.join("', '", pjobs); // "'ANALYST',  'MANAGER'"
 	            pjob = String.format("'%s'", pjob);
 	         }
 	      } catch (Exception e) {
@@ -174,22 +175,21 @@ public class EmpSearch extends HttpServlet {
 	            e.printStackTrace();
 	         } //try     
 	      } // try 
-				
 		
-		//4. 포워딩
+		// 4. 포워딩 한다.
 		request.setAttribute("dlist", dlist);
 		request.setAttribute("jlist", jlist);
 		request.setAttribute("elist", elist);
+		
 		String path = "/days04/ex02_empsearch_jstl.jsp";
 		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 		dispatcher.forward(request, response);
 
 	}
 
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		doGet(request, response);
 	}
 
-}
+} // class

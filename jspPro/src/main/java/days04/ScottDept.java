@@ -18,81 +18,77 @@ import org.doit.domain.DeptVO;
 
 import com.util.DBConn;
 
-
-//urlPatterns = { "/scott/dept" }) 이 코딩이랑 같은거다 아래를 썼으면 urlPatterns을 생략해도 된다
-//@WebServlet("/scott/dept")	
+// urlPatterns = {" /scott/dept "} // 밑과 동일
+// @WebServlet("/scott/dept") 
 public class ScottDept extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	public ScottDept() {
 		super();
+
 	}
 
-	//post요청, get 요청
+	// post 요청, get 요청
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(">ScottDept.doget()...");
+		System.out.println("doGet()");
 
-		//부서정보를 담는 작업 days02>ex01.jsp
-		//로직을 처리하는 부분
+		// 로직 처리
 		Connection conn = null;
-		PreparedStatement psmt = null;
+		PreparedStatement pstmt = null;
 		String sql = " SELECT * "
 				+ " FROM dept ";
 		ResultSet rs = null;
-		
 
 		int deptno;
 		String dname, loc;
 		DeptVO vo = null;
 		ArrayList<DeptVO> list = null;
-		Iterator<DeptVO> ir;
+		Iterator<DeptVO> ir = null;
 
 		try{
 			conn = DBConn.getConnection();
-			// System.out.println("> conn = " + conn);
-			// System.out.println("> conn = " + conn.isClosed());	//닫혀있니? true : 닫혀있음 / False : 열려있음
-			psmt = conn.prepareStatement(sql);
-			rs = psmt.executeQuery();
+			// System.out.println("> Conn = " + conn);
+			// System.out.println("> isClosed = " + conn.isClosed());
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
 			if(rs.next()){
 				list = new ArrayList<>();
 				do{
+
 					deptno = rs.getInt("deptno");
 					dname = rs.getString("dname");
 					loc = rs.getString("loc");
 
 					vo = new DeptVO().builder()
-							.deptno(deptno).dname(dname).loc(loc)
-							.build();
+							.deptno(deptno).dname(dname).loc(loc).build();
+
 					list.add(vo);
 
 				}while(rs.next());
-			}//if
-
+			} // if
 		}catch(Exception e){
-			e.printStackTrace();
+
 		}finally{
 			try{
-				psmt.close();
+				pstmt.close();
 				DBConn.close();
-
 			}catch(Exception e){
 				e.printStackTrace();
-			}//try/catch
-		}//try/catch/finally
+			}
 
+		} // try
 
-		//ex01_dept.jsp 포워딩..
-		// 1) 포워딩하는 jsp 페이지에 전달 하라 +request 객체 저장.
-		request.setAttribute("list", list);
-		
+		// 1. jsp 페이지에 전달 + request 객체에다 저장한다.
+		// EL 로 받으면 "list" 이름을 따라간다.
+		request.setAttribute("list", list); // 보낸다.
+		// ex01_dept.jsp 포워딩
+		// 서블릿이 이미 /jspPro 안에 있어서 contextPath 가 없어도 상관없다.
+		// String path = "/days04/ex01_dept.jsp";
 		String path = "/days04/ex01_dept_jstl.jsp";
-		//↑ 404 오류가 뜨는 이유  1.  파일이 없거나		2. 잘못된 경로를 입력
 		RequestDispatcher dispatcher = request.getRequestDispatcher(path);
 		dispatcher.forward(request, response);
-		
-		//emp
-		
-		
-	}
+
+	} // doGet
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

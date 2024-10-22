@@ -30,6 +30,7 @@ span.material-symbols-outlined {
 		<ul>
 			<li><a href="#">로그인</a></li>
 			<li><a href="#">회원가입</a></li>
+			<li><a href="/jspPro/cstvsboard/list.htm">게시판</a></li>
 		</ul>
 	</header>
 	<div>
@@ -75,7 +76,7 @@ span.material-symbols-outlined {
 						<c:forEach items="${list}" var="dto">
 							<tr>
 								<td>${dto.seq}</td>
-								<td><a
+								<td><a class="title"
 									href="<%= contextPath %>/cstvsboard/view.htm?seq=${ dto.seq }">${dto.title}</a></td>
 								<td>${dto.writer}</td>
 								<td>${dto.writedate}</td>
@@ -84,7 +85,15 @@ span.material-symbols-outlined {
 						</c:forEach>
 					</c:otherwise>
 				</c:choose>
+				<script>
+       $("a.title").attr("href", function (index, oldHref){
+          let npp = ${ pvo.numberPerPage };
+          return `\${oldHref}&currentPage=${param.currentPage}&numberPerPage=\${npp}`
+       });
+     </script>
+				
 			</tbody>
+				
 			<tfoot>
 				<tr>
 					<td colspan="5" align="center">
@@ -115,10 +124,7 @@ span.material-symbols-outlined {
 									
 						})
 						</script>
-						<input type="hidden" name="nppg" value="${pvo.numberPerPage}"/>
-						<input type="hidden" name="schC" value="${param.searchCondition}"/>
-						<input type="hidden" name="schW" value="${param.searchWord}"/>
-
+						
 					</td>
 				</tr>
 				<tr>
@@ -132,7 +138,7 @@ span.material-symbols-outlined {
 							</select>
 							<input type="text" name="searchWord" id="searchWord" />
 							<input type="submit" value="search" />
-							<input type="hidden" name="numberPerPage" value="${parma.numberPerPage}" />
+							<input type="hidden" name="numberPerPage" value="${ param.numberPerPage }">
 						</form>
 					</td>
 				</tr>
@@ -150,12 +156,19 @@ span.material-symbols-outlined {
 		
 <script>
 //검색 조건, 검색어 상태 유지
-$(document).ready(function() {
+
+$("#searchCondition").val(
+           '${ empty param.searchCondition ? "t" : param.searchCondition}');
+$("#searchWord").val('${param.searchWord}');
+
+
+
+/* $(document).ready(function() {
 if('${param.searchCondition}'){
 $("#searchCondition").val('${param.searchCondition}');	
 }
 $("#searchWord").val('${param.searchWord}');
-})
+}) */
 
 </script>
 	</div>

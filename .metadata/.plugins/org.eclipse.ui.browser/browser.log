@@ -29,3 +29,53 @@
 10월 15, 2024 17:41:28.367 [9436:5044:1015/174128.367:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
 10월 15, 2024 17:41:37.751 [9436:5044:1015/174137.750:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
 10월 15, 2024 17:41:38.266 [9436:5044:1015/174138.265:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+
+10월 22, 2024 15:06:43.948 NEW SESSION
+10월 22, 2024 15:06:43.948 Created TensorFlow Lite XNNPACK delegate for CPU.
+10월 22, 2024 15:06:44.147 [6808:9712:1022/150644.147:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 22, 2024 15:07:04.917 [6808:9712:1022/150704.916:ERROR:connection_factory_impl.cc(434)] Failed to connect to MCS endpoint with error -118
+10월 22, 2024 15:07:09.182 [6808:9712:1022/150709.181:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 22, 2024 15:07:28.955 [6808:9092:1022/150728.955:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 22, 2024 15:07:28.955 [6808:9092:1022/150728.955:ERROR:interface_endpoint_client.cc(725)] Message 1 rejected by interface blink.mojom.WidgetHost
+10월 22, 2024 15:07:50.326 [6808:9712:1022/150750.325:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 22, 2024 15:09:22.789 [6808:9712:1022/150922.789:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 22, 2024 15:12:54.879 [6808:9712:1022/151254.879:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 22, 2024 15:18:38.920 [6808:9712:1022/151838.920:ERROR:registration_request.cc(291)] Registration response error message: DEPRECATED_ENDPOINT
+10월 22, 2024 15:46:05.322 [6808:9092:1022/154605.321:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:46:05.842 [6808:9092:1022/154605.841:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:11.827 [6808:9092:1022/155011.827:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:12.359 [6808:9092:1022/155012.359:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:13.139 [6808:9092:1022/155013.139:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:13.656 [6808:9092:1022/155013.656:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:14.345 [6808:9092:1022/155014.345:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:15.708 [6808:9092:1022/155015.707:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:16.591 [6808:9092:1022/155016.591:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:19.462 [6808:9092:1022/155019.461:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:21.942 [6808:9092:1022/155021.942:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:23.710 [6808:9092:1022/155023.710:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:24.459 [6808:9092:1022/155024.458:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:25.140 [6808:9092:1022/155025.139:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:25.978 [6808:9092:1022/155025.977:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:26.610 [6808:9092:1022/155026.609:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:27.746 [6808:9092:1022/155027.746:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:28.359 [6808:9092:1022/155028.359:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:28.944 [6808:9092:1022/155028.943:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:29.458 [6808:9092:1022/155029.457:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:30.89 [6808:9092:1022/155030.089:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:30.808 [6808:9092:1022/155030.808:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:31.524 [6808:9092:1022/155031.524:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:32.62 [6808:9092:1022/155032.061:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:32.856 [6808:9092:1022/155032.856:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:33.460 [6808:9092:1022/155033.459:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:35.699 [6808:9092:1022/155035.699:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:50:36.706 [6808:9092:1022/155036.706:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:51:48.289 [6808:9092:1022/155148.289:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:51:49.194 [6808:9092:1022/155149.193:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:23.978 [6808:9092:1022/155823.978:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:24.494 [6808:9092:1022/155824.494:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:25.893 [6808:9092:1022/155825.893:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:26.427 [6808:9092:1022/155826.426:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:27.95 [6808:9092:1022/155827.095:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:27.774 [6808:9092:1022/155827.774:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:28.393 [6808:9092:1022/155828.392:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)
+10월 22, 2024 15:58:29.441 [6808:9092:1022/155829.440:ERROR:CONSOLE(1)] "Unknown VE context: language-mismatch", source: devtools://devtools/bundled/devtools-frontend/front_end/ui/visual_logging/visual_logging.js (1)

@@ -1,5 +1,7 @@
 package org.doit.domain;
 
+import java.time.LocalDateTime;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -13,14 +15,12 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class DeptVO {
+
 	private int deptno;
 	private String dname;
 	private String loc;
 	
-//	private int cnt; //사원수
+	// private int cnt; // 사원수
 
-
-
-} //class
+} // class

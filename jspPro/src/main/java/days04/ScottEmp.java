@@ -19,106 +19,99 @@ import org.doit.domain.EmpVO;
 
 import com.util.DBConn;
 
-
-//@WebServlet("/scott/emp")
+// @WebServlet("/scott/emp")
 public class ScottEmp extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-    	public ScottEmp() {
+
+    public ScottEmp() {
         super();
+
     }
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println(">ScottEmp.doGet()...");
-	
+		
+		System.out.println("doGet");
 		
 		int deptno;
 		String pDeptno = request.getParameter("deptno");
 		try{
-		deptno = Integer.parseInt(pDeptno);
-			
+			deptno = Integer.parseInt(pDeptno); // null, ""
 		}catch(Exception e){
-			deptno = 10;
+			deptno = 10; // 안넘어오면 10값 / 넘어오면 deptno값
 		}
-
-	Connection conn = null;		//db연결
-		PreparedStatement psmt = null;
+		
+		Connection conn = null;
+		PreparedStatement pstmt = null;
 		String sql = " SELECT empno, ename, job, mgr, "
-				+" TO_CHAR(hiredate,'yyyy-MM-dd')hiredate, sal,  comm, deptno "
-				+ " FROM emp "
-				+ " WHERE deptno = ? ";	// ? : 파라미터값 넘어올곳
+						+ " TO_CHAR(hiredate,'yyyy-MM-dd') hiredate, sal, comm, deptno "
+						+ " FROM emp "
+						+ " WHERE deptno = ? ";
 		ResultSet rs = null;
-						
-		int empno,mgr;
+		
+		int empno, mgr;
 		String ename, job;
 		Date hiredate;
-		//LocalDateTime hiredate;
 		double sal, comm;
 		
-
-
 		EmpVO vo = null;
 		ArrayList<EmpVO> list = null;
 		Iterator<EmpVO> ir = null;
 		
 		try{
 			conn = DBConn.getConnection();
-			// System.out.println("> conn = " + conn);
-			// System.out.println("> conn = " + conn.isClosed());	//닫혀있니? true : 닫혀있음 / False : 열려있음
-			psmt = conn.prepareStatement(sql);
-			//?파라미터 값을 줘야함
-			psmt.setInt(1, deptno);	// 실행하기 전에 줘야할 값 줘야지				
-					
-			rs = psmt.executeQuery();
+			// System.out.println("> Conn = " + conn);
+			// System.out.println("> isClosed = " + conn.isClosed());
+			pstmt = conn.prepareStatement(sql);
+			// ? 에 대한 쿼리
+			pstmt.setInt(1, deptno);
+			
+			rs = pstmt.executeQuery();
 			if(rs.next()){
 				list = new ArrayList<>();
 				do{
+					
 					empno = rs.getInt("empno");
 					ename = rs.getString("ename");
 					job = rs.getString("job");
 					mgr = rs.getInt("mgr");
 					hiredate = rs.getDate("hiredate");
-					//hiredate = rs.getTimestamp("hiredate").toLocalDateTime();
-					sal = rs.getInt("sal");
-					comm = rs.getInt("comm");
+					sal = rs.getDouble("sal");
+					comm = rs.getDouble("comm");
+					deptno = rs.getInt("deptno");
 					
 					vo = new EmpVO().builder()
-									.empno(empno)
-									.ename(ename)
-									.job(job)
-									.mgr(mgr)
-									.hiredate(hiredate)
-									.sal(sal)
-									.comm(comm)
-									.build();
-					list.add(vo);				
+						.empno(empno).ename(ename).job(job).mgr(mgr)
+						.hiredate(hiredate).sal(sal).comm(comm).deptno(deptno).build();
+
+					list.add(vo);
+					
 				}while(rs.next());
-			}//if
-				
-		}catch(Exception e){
-			e.printStackTrace();
+			} // if
+				}catch(Exception e){
+			
 		}finally{
 			try{
-				psmt.close();
+				pstmt.close();
 				DBConn.close();
-				
 			}catch(Exception e){
 				e.printStackTrace();
-			}//try/catch
-		}//try/catch/finally
-		
-		request.setAttribute("list", list);
-	      
-	      String path = "/days04/ex01_emp.jsp";
-	      RequestDispatcher dispatcher = request.getRequestDispatcher(path);
-	      dispatcher.forward(request, response);
-	}
-	
-	
+			}
 
-	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		} // try
 		
+		// 1. jsp 페이지에 전달 + request 객체에다 저장한다.
+				request.setAttribute("list", list); // 보낸다.
+				// ex01_dept.jsp 포워딩
+				// 서블릿이 이미 /jspPro 안에 있어서 contextPath 가 없어도 상관없다.
+				// String path = "/days04/ex01_emp.jsp";
+				String path = "/days04/ex01_emp_jstl.jsp";
+				RequestDispatcher dispatcher = request.getRequestDispatcher(path);
+				dispatcher.forward(request, response);
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		doGet(request, response);
 	}
 

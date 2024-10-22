@@ -36,6 +36,7 @@ span.material-symbols-outlined {
 		<ul>
 			<li><a href="#">로그인</a></li>
 			<li><a href="#">회원가입</a></li>
+			<li><a href="/jspPro/cstvsboard/list.htm">게시판</a></li>
 		</ul>
 	</header>
 	<div>
@@ -71,15 +72,7 @@ span.material-symbols-outlined {
 					<td colspan="4" align="center">
 						<a href="<%= contextPath %>/cstvsboard/edit.htm?seq=${ dto.seq }">수정하기</a>
 						<a href="<%= contextPath %>/cstvsboard/delete.htm?seq=${ dto.seq }">삭제하기</a>
-						<% 
-						String nppg = request.getParameter("nppg");
-						String schC = request.getParameter("schC");
-						String schW = request.getParameter("schW");
-						
-						System.out.println(nppg);		//null값으로 나온다
-						%>
-						
-						<%-- <a href=`<%= contextPath %>/cstvsboard/list.htm?currentPage=\${ }&numberPerPage=\${npp}&searchCondition=\${ }&searchWord=\${ }`>Home</a> --%>
+						<a href="<%= contextPath %>/cstvsboard/list.htm">Home</a>
 						<%-- <a href = "javascript:history.go(-1);">Home</a> --%>
 						<input type="button" id="btnModalDelete" value="모달창 삭제">
 					</td>
@@ -146,6 +139,14 @@ span.material-symbols-outlined {
 			dialog.dialog( "open" );
 			$("#spn").show().slideToggle(3000);
 		} // if
+	</script>
+	
+	<script>
+	// HOme 버튼 클릭시
+	   $("tfoot a:last-of-type").attr("href", function (index, oldHref){
+	        return    `\${oldHref}?currentPage=${param.currentPage}&numberPerPage=${param.numberPerPage}&searchCondition=${param.searchCondition}&searchWord=${param.searchWord}`;
+	   });
+
 	</script>
 	
 </body>

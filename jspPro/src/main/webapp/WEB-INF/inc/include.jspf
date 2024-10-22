@@ -1,0 +1,9 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+//공통 적으로 사용되는 코딩도 모듈화가 가능하다 -> include 지시자를 사용하여서 삽입 가능
+String contextPath = request.getContextPath();
+request.setCharacterEncoding("UTF-8");
+String loginName = "admin";
+
+%>

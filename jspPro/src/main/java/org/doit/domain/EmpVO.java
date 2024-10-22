@@ -1,6 +1,6 @@
 package org.doit.domain;
 
-//import java.time.LocalDateTime;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -16,16 +16,16 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class EmpVO {
+
 	private int empno;
-	private String ename, job;
+	private String ename;
+	private String job;
 	private int mgr;
-	private Date hiredate;
-	private double sal; //pay
+	// private LocalDateTime hiredate;
+	private Date hiredate; // 맞출려고 util Date 로 바꿔줌
+	private double sal; // pay
 	private double comm;
 	private int deptno;
-//	private LocalDateTime hiredate;
 
-
-} //class
+} // class
