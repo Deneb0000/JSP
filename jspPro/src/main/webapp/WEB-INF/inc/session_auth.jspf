@@ -1,0 +1,10 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%
+//인증 + 권한x
+// [ 세션 사용 인증 처리 ] auth 세션이름 = 로그인 ID 만 저장 (약속)
+
+String sname ="auth";
+String logonId = null;
+logonId = (String) session.getAttribute(sname);
+%>

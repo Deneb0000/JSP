@@ -37,9 +37,10 @@
   String name = "홍길동";
   %>
   <%
-  for(int i; i <= 10; i++){
+  for(int i = 1; i <= 10; i++){
 	  %>
 	i=<%= i %> <br>   
+	<%
   }
   %>
   이름 : <%= name %> <!-- 표현식 --> <br />
@@ -47,7 +48,6 @@
   메서드 호출 : <%= getMessage("헬로우") %> <br />
   
   <%!
-  //선언문
   int age = 20;
   
   public String getMessage(String message){
