@@ -88,7 +88,7 @@ span.material-symbols-outlined {
 				<script>
        $("a.title").attr("href", function (index, oldHref){
           let npp = ${ pvo.numberPerPage };
-          return `\${oldHref}&currentPage=${param.currentPage}&numberPerPage=\${npp}`
+          return `\${oldHref}&currentPage=${param.currentPage}&numberPerPage=\${npp}&searchCondition=${param.searchCondition}&searchWord=${param.searchWord}`;
        });
      </script>
 				

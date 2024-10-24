@@ -28,11 +28,11 @@
   <xmp class="code">
     [ request - 가장 많이 사용되는 기본 객체 ]
     
-    1. contentPath(컨텍스트 루트) : <%= request.getContextPath() %>
-    2. 클라이언트 IP :  <%= request.getRemoteAddr() %>
-    3. 요청 전송 방식 : <%= request.getMethod() %>
-    4. 요쳥 URL	:	<%= request.getRequestURL() %>	
-    5. 요청 URI	:	<%= request.getRequestURI() %>
+***    1. contentPath(컨텍스트 루트) : <%= request.getContextPath() %>
+***    2. 클라이언트 IP :  <%= request.getRemoteAddr() %>
+***    3. 요청 전송 방식 : <%= request.getMethod() %>
+***    4. 요쳥 URL	:	<%= request.getRequestURL() %>	
+***    5. 요청 URI	:	<%= request.getRequestURI() %>
     
   </xmp>
 </div>

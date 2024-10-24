@@ -25,6 +25,7 @@ public class Write extends HttpServlet {
 
     }
 
+    //글쓰기 버튼 클릭
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		System.out.println("Write.doGet()");

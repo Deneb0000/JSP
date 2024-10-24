@@ -36,7 +36,7 @@ logonId = (String) session.getAttribute(sname);
 </header>
 <div>
   <xmp class="code">
-    
+    ex02_default.jsp 
   </xmp>
 <%
      if( logonId == null ){

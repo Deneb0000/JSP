@@ -41,7 +41,7 @@ public class DispatcherServlet extends HttpServlet {
     	// C:\E\Class\SS20Class\Workspace\JSPClass\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\jspPro\WEB-INF\commandHandler.properties
     	//System.out.println(realPath);
     	
-    	Properties prop = new Properties();
+    	Properties prop = new Properties();				//Properties : map 계열 해쉬테이블과 같다
     	try (FileReader reader = new FileReader(realPath);) {
 			prop.load(reader);		 
 		} catch (Exception e) { 

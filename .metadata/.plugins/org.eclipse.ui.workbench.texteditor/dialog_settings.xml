@@ -13,6 +13,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="setMaxAge"/>
 			<item value="class"/>
 			<item value="oldhref"/>
 			<item value="hidden"/>
@@ -20,7 +21,6 @@
 			<item value="dto"/>
 			<item value="Hom"/>
 			<item value="sea"/>
-			<item value="td"/>
 		</list>
 		<list key="replacehistory">
 			<item value="EmpVO"/>

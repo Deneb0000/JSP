@@ -25,7 +25,6 @@
   <ul>
     <li><a href="#">로그인</a></li>
     <li><a href="#">회원가입</a></li>
-    <li><a href="/jspPro/cstvsboard/list.htm">게시판</a></li>
   </ul>
 </header>
 <div>
