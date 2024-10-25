@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.text.quicksearch.internal.ui.QuickSearchDialog.DIALOG_SETTINGS">
-		<item key="LAST_QUERY" value="Def"/>
+		<item key="LAST_QUERY" value="Date()"/>
 		<item key="PATH_FILTER" value=""/>
 		<item key="CASE_SENSITIVE" value="true"/>
 		<item key="KEEP_OPEN" value="false"/>
 		<list key="COLUMN_WIDTHS">
 			<item value="40"/>
 			<item value="400"/>
-			<item value="874"/>
+			<item value="891"/>
 		</list>
 		<list key="SASH_WEIGHTS">
 			<item value="424"/>
@@ -17,8 +17,8 @@
 		<section name="DialogBoundsSettings">
 			<item key="DIALOG_HEIGHT" value="949"/>
 			<item key="DIALOG_WIDTH" value="1371"/>
-			<item key="DIALOG_X_ORIGIN" value="697"/>
-			<item key="DIALOG_Y_ORIGIN" value="402"/>
+			<item key="DIALOG_X_ORIGIN" value="557"/>
+			<item key="DIALOG_Y_ORIGIN" value="91"/>
 			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 		</section>
 	</section>
