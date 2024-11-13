@@ -8,21 +8,24 @@
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value=""/>
+		<item key="selection" value="검색"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="list.htm"/>
-			<item value="cstvs"/>
-			<item value="board/list"/>
-			<item value="글쓰"/>
-			<item value="setMaxAge"/>
-			<item value="class"/>
-			<item value="oldhref"/>
-			<item value="hidden"/>
+			<item value="getTotalRecords(String searchCondition, String searchWord)"/>
+			<item value="pagination"/>
+			<item value="${ pageBlock }"/>
+			<item value="request.set"/>
+			<item value="rowCount"/>
+			<item value="replyboard"/>
+			<item value="num"/>
+			<item value="readcount"/>
 		</list>
 		<list key="replacehistory">
+			<item value="addClass"/>
+			<item value="https://www.ohora.kr/web/brandstory/ohora_BI_logotype_white.png"/>
+			<item value="$"/>
 			<item value="EmpVO"/>
 			<item value="EmoVO"/>
 			<item value="pstmt"/>

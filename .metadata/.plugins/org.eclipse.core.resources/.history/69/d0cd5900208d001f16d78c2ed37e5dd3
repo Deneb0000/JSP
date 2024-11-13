@@ -1,5 +1,0 @@
-package days04.board.persistence;
-
-blic class BoardDAOImpl implements BoardDAO{
-	
-}
