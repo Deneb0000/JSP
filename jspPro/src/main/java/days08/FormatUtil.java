@@ -12,5 +12,7 @@ public class FormatUtil {
 	}
 	
 	//static 클래스
-	public static String number()
+	public static String number() {
+		return null;
+	}
 }

@@ -1,0 +1,64 @@
+/* Noto Sans KR 폰트 설정 - font-family 사용할 때 사용*/
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 100;
+  src: url(NotoSans-Thin.woff2) format('woff2'),
+       url(NotoSans-Thin.woff) format('woff'),
+       url(NotoSans-Thin.eot) format('eot'),
+       url(NotoSans-Thin.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 200;
+  src: url(NotoSans-Light.woff2) format('woff2'),
+       url(NotoSans-Light.woff) format('woff'),
+       url(NotoSans-Light.eot) format('eot'),
+       url(NotoSans-Light.otf) format('opentype');
+}
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-style: normal;
+  font-weight: 300;
+  src: url(NotoSans-DemiLight.woff2) format('woff2'),
+       url(NotoSans-DemiLight.woff) format('woff'),
+       url(NotoSans-DemiLight.eot) format('eot'),
+       url(NotoSans-DemiLight.otf) format('opentype');
+}
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 400;
+   src: url(NotoSans-Regular.woff2) format('woff2'),
+        url(NotoSans-Regular.woff) format('woff'),
+       	url(NotoSans-Regular.eot) format('eot'),
+        url(NotoSans-Regular.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 500;
+   src: url(NotoSans-Medium.woff2) format('woff2'),
+        url(NotoSans-Medium.woff) format('woff'),
+        url(NotoSans-Medium.eot) format('eot'),
+        url(NotoSans-Medium.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 700;
+   src: url(NotoSans-Bold.woff2) format('woff2'),
+        url(NotoSans-Bold.woff) format('woff'),
+        url(NotoSans-Bold.eot) format('eot'),
+        url(NotoSans-Bold.otf) format('opentype');
+ }
+@font-face {
+   font-family: 'Noto Sans KR';
+   font-style: normal;
+   font-weight: 900;
+   src: url(NotoSans-Black.woff2) format('woff2'),
+        url(NotoSans-Black.woff) format('woff'),
+        url(NotoSans-Black.eot) format('eot'),
+        url(NotoSans-Black.otf) format('opentype');
+ }
